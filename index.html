@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Farooq Hussain — Enterprise Service Management Leader | ITIL® 4 Master | Creator of AVI™ & PulseXM™ | 20+ Years across Aviation, Healthcare, Telecom & Government" />
+  <meta property="og:title" content="Farooq Hussain · Executive Profile" />
+  <meta property="og:description" content="ITIL® 4 Master · AVI™ Creator · PulseXM™ Creator · Enterprise Service Management Leader" />
+  <meta property="og:type" content="profile" />
+  <title>Farooq Hussain · Enterprise Service Management Leader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    /* =====================
+       DESIGN TOKENS
+    ===================== */
+    :root {
+      --navy:        #080E1D;
+      --navy-mid:    #0E1526;
+      --navy-light:  #161F34;
+      --navy-card:   #111829;
+      --gold:        #C9A84C;
+      --gold-light:  #E5C46A;
+      --gold-pale:   rgba(201,168,76,0.10);
+      --gold-border: rgba(201,168,76,0.22);
+      --white:       #FFFFFF;
+      --off-white:   #EDE9E2;
+      --muted:       rgba(237,233,226,0.52);
+      --muted-light: rgba(237,233,226,0.28);
+      --glass:       rgba(255,255,255,0.035);
+      --glass-b:     rgba(255,255,255,0.07);
+      --glass-hover: rgba(255,255,255,0.065);
+      --r-sm: 8px;
+      --r-md: 14px;
+      --r-lg: 20px;
+      --r-xl: 28px;
+    }
+
+    /* =====================
+       RESET & BASE
+    ===================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--navy);
+      color: var(--off-white);
+      line-height: 1.6;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { color: var(--gold-light); }
+
+    /* =====================
+       LAYOUT
+    ===================== */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 1rem; }
+    }
+
+    /* =====================
+       NAV
+    ===================== */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8,14,29,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--glass-b);
+      padding: 0.75rem 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.3px;
+    }
+
+    .nav-brand span { color: var(--gold); }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
+
+    /* =====================
+       HERO
+    ===================== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 5rem 0 4rem;
+      border-bottom: 1px solid var(--glass-b);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -150px; right: -150px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: -100px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(99,130,200,0.05) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 2.5rem;
+      align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: auto 1fr;
+      }
+      .hero-right { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+      .avatar-col { display: flex; align-items: center; gap: 1rem; }
+    }
+
+    /* Avatar */
+    .avatar-wrap {
+      position: relative;
+      width: 110px; height: 110px;
+    }
+
+    .avatar-ring-outer {
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      background: conic-gradient(
+        var(--gold) 0deg,
+        var(--gold-light) 90deg,
+        rgba(201,168,76,0.3) 180deg,
+        var(--gold) 360deg
+      );
+      animation: spin 12s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .avatar {
+      position: relative;
+      z-index: 1;
+      width: 110px; height: 110px;
+      border-radius: 50%;
+      background: var(--navy-light);
+      border: 4px solid var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--gold);
+      letter-spacing: -1px;
+    }
+
+    .online-dot {
+      position: absolute;
+      bottom: 6px; right: 6px;
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background: #34D399;
+      border: 3px solid var(--navy);
+      z-index: 2;
+    }
+
+    /* Hero text */
+    .hero-eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(36px, 5vw, 58px);
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.05;
+      letter-spacing: -1px;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-title {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      line-height: 1.5;
+    }
+
+    .hero-title strong { color: var(--off-white); font-weight: 600; }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 1.5rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .badge-gold {
+      background: var(--gold-pale);
+      color: var(--gold-light);
+      border: 1px solid var(--gold-border);
+    }
+
+    .badge-glass {
+      background: var(--glass);
+      color: var(--muted);
+      border: 1px solid var(--glass-b);
+    }
+
+    .hero-quote {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.6;
+      border-left: 2px solid var(--gold);
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+      max-width: 560px;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #000;
+      border: none;
+      padding: 12px 24px;
+      border-radius: var(--r-sm);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      color: #000;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(201,168,76,0.25);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--off-white);
+      border: 1px solid var(--glass-b);
+      padding: 12px 20px;
+      border-radius: var(--r-sm);
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: var(--glass-hover);
+      border-color: var(--gold-border);
+      color: var(--off-white);
+    }
+
+    /* Hero right column */
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-width: 200px;
+    }
+
+    .stat-pill {
+      background: var(--glass);
+      border: 1px solid var(--glass-b);
+      border-radius: var(--r-md);
+      padding: 1rem 1.25rem;
+      text-align: right;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-pill::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .stat-num {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 3px;
+    }
+
+    .stat-num.g { color: var(--gold); }
+
+    .stat-lbl {
+      font-size: 9px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* =====================
+       SECTION HEADERS
+    ===================== */
+    .section {
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--glass-b);
+    }
+
+    .section-last {
+      padding: 4rem 0 5rem;
+    }
+
+    .s-eyebrow {
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 0.5rem;
+    }
+
+    .s-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(24px, 3vw, 34px);
+      color: var(--white);
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+    }
+
+    .s-sub {
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 540px;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+
+    /* =====================
+       REPUTATION SCORECARD
+    ===================== */
+    .scorecard-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--glass-b);
+      border: 1px solid var(--glass-b);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .scorecard-grid { grid-template-columns: repeat(2, 1fr); }
+      .scorecard-grid .sc-item:last-child { grid-column: span 2; }
+    }
+
+    .sc-item {
+      background: var(--navy-card);
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sc-item::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 20%; right: 20%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.4;
+    }
+
+    .sc-val {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .sc-val.g { color: var(--gold); }
+
+    .sc-label {
+      font-size: 10px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .sc-sublabel {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    /* Influence bars */
+    .infl-bars { display: flex; flex-direction: column; gap: 1.25rem; }
+
+    .infl-row {}
+
+    .infl-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .infl-name {
+      font-size: 13px;
+      color: var(--off-white);
+      font-weight: 500;
+    }
+
+    .infl-pct {
+      font-size: 13px;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .bar-track {
+      height: 5px;
+      background: var(--glass);
+      border-radius: 3px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      width: 0;
+      transition: width 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* =====================
+       IMPACT STATS
+    ===================== */
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+
+    .impact-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-b);
+      border-radius: var(--r-md);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      transition: all 0.25s;
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .impact-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .impact-card:hover { background: var(--glass-hover); transform: translateY(-4px); }
+    .impact-card:hover::before { opacity: 1; }
+
+    .impact-icon { font-size: 24px; margin-bottom: 10px; }
+
+    .impact-val {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+
+    .impact-label {
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    /* =====================
+       FRAMEWORKS
+    ===================== */
+    .fw-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .fw-card {
+      background: var(--navy-card);
+      border: 1px solid var(--glass-b);
+      border-radius: var(--r-lg);
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.25s;
+      cursor: pointer;
+    }
+
+    .fw-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: var(--gold);
+    }
+
+    .fw-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.4), transparent);
+    }
+
+    .fw-card:hover { background: var(--navy-light); transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.4); }
+
+    .fw-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px; height: 56px;
+      border-radius: 12px;
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-border);
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--gold);
+      letter-spacing: -0.5px;
+      margin-bottom: 1.25rem;
+    }
+
+    .fw-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .fw-tagline {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+    }
+
+    .fw-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    .fw-pillars {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .fw-pillar {
+      font-size: 9px;
+      font-weight: 600;
+      padding: 4px 9px;
+      border-radius: 4px;
+      background: var(--gold-pale);
+      color: var(--gold-light);
+      border: 1px solid var(--gold-border);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .fw-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 1.25rem;
+      transition: gap 0.2s;
+    }
+
+    .fw-link:hover { gap: 8px; }
+
+    /* =====================
+       PUBLICATIONS
+    ===================== */
+    .pub-list { display: flex; flex-direction: column; gap: 1rem; }
+
+    .pub-card {
+      background: var(--navy-card);
+      border: 1px solid var(--glass-b);
+      border-radius: var(--r-md);
+      padding: 1.5rem 1.75rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: center;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .pub-card:hover { background: var(--navy-light); border-color: var(--gold-border); transform: translateX(4px); }
+
+    .pub-type {
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 5px;
+    }
+
+    .pub-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+
+    .pub-meta {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .pub-doi {
+      font-size: 10px;
+      font-family: 'Courier New', monospace;
+      color: var(--gold);
+      background: var(--gold-pale);
+      padding: 3px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    /* =====================
+       TIMELINE
+    ===================== */
+    .timeline { position: relative; padding-left: 2rem; }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 6px; top: 0; bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg, var(--gold), rgba(201,168,76,0.1));
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 2.5rem;
+    }
+
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: -26px; top: 5px;
+      width: 13px; height: 13px;
+      border-radius: 50%;
+      background: var(--navy);
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 0 4px rgba(201,168,76,0.1);
+    }
+
+    .tl-item.dim::before { border-color: var(--glass-b); box-shadow: none; }
+
+    .tl-year {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 4px;
+    }
+
+    .tl-role {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 2px;
+    }
+
+    .tl-org {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .tl-detail {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.6;
+      background: var(--glass);
+      border: 1px solid var(--glass-b);
+      border-radius: var(--r-sm);
+      padding: 10px 14px;
+    }
+
+    /* =====================
+       EXPERTISE RADAR
+    ===================== */
+    .expertise-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .exp-tag {
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.2s;
+    }
+
+    .exp-tag.t1 {
+      background: var(--gold-pale);
+      color: var(--gold-light);
+      border: 1px solid var(--gold-border);
+    }
+
+    .exp-tag.t2 {
+      background: var(--glass);
+      color: var(--off-white);
+      border: 1px solid var(--glass-b);
+    }
+
+    .exp-tag:hover { transform: translateY(-2px); opacity: 0.85; }
+
+    /* =====================
+       SECTORS
+    ===================== */
+    .sector-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .sector-card {
+      background: var(--navy-card);
+      border: 1px solid var(--glass-b);
+      border-radius: var(--r-md);
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.2s;
+    }
+
+    .sector-card:hover { border-color: var(--gold-border); transform: translateX(3px); }
+
+    .sector-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .sector-name { font-size: 13px; font-weight: 500; color: var(--off-white); }
+
+    .sector-years { margin-left: auto; font-size: 11px; color: var(--gold); font-weight: 600; }
+
+    /* =====================
+       CERTIFICATIONS
+    ===================== */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .cert-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-b);
+      border-radius: var(--r-md);
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.2s;
+      cursor: default;
+    }
+
+    .cert-card:hover { border-color: var(--gold-border); background: var(--glass-hover); }
+
+    .cert-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .cert-name { font-size: 12px; font-weight: 600; color: var(--white); }
+    .cert-body { font-size: 10px; color: var(--muted); }
+
+    /* =====================
+       TESTIMONIALS
+    ===================== */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .testimonial {
+      background: var(--navy-card);
+      border: 1px solid var(--glass-b);
+      border-radius: var(--r-lg);
+      padding: 1.75rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.2s;
+    }
+
+    .testimonial::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.35), transparent);
+    }
+
+    .testimonial:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.3); }
+
+    .t-quote-mark {
+      font-family: 'DM Serif Display', serif;
+      font-size: 56px;
+      color: var(--gold);
+      line-height: 0.5;
+      margin-bottom: 1rem;
+      opacity: 0.6;
+    }
+
+    .t-text {
+      font-size: 14px;
+      color: var(--off-white);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .t-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-top: 1px solid var(--glass-b);
+      padding-top: 1rem;
+    }
+
+    .t-avatar {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .t-name { font-size: 13px; font-weight: 600; color: var(--white); }
+    .t-role { font-size: 11px; color: var(--muted); }
+
+    /* =====================
+       AI INSIGHT PANEL
+    ===================== */
+    .ai-panel {
+      background: linear-gradient(135deg, rgba(201,168,76,0.05) 0%, rgba(8,14,29,0) 100%);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--r-xl);
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ai-panel::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .ai-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1.25rem;
+    }
+
+    .ai-pulse {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.75); }
+    }
+
+    .ai-label {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .ai-body {
+      font-size: 15px;
+      color: var(--off-white);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .ai-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .ai-tag {
+      font-size: 10px;
+      font-weight: 600;
+      padding: 5px 11px;
+      border-radius: 5px;
+      background: rgba(201,168,76,0.08);
+      color: var(--gold);
+      border: 1px solid var(--gold-border);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* =====================
+       FOOTER
+    ===================== */
+    footer {
+      background: var(--navy-mid);
+      border-top: 1px solid var(--glass-b);
+      padding: 2.5rem 0;
+      text-align: center;
+    }
+
+    .footer-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      color: var(--white);
+      margin-bottom: 5px;
+    }
+
+    .footer-tagline {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links a {
+      font-size: 11px;
+      color: var(--muted);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--gold); }
+
+    .footer-copy {
+      font-size: 11px;
+      color: var(--muted-light);
+    }
+
+    /* =====================
+       SCROLL ANIMATIONS
+    ===================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =====================
+       RESPONSIVE TWEAKS
+    ===================== */
+    @media (max-width: 600px) {
+      .scorecard-grid { grid-template-columns: repeat(2, 1fr); }
+      .pub-card { grid-template-columns: 1fr; }
+      .pub-doi { display: none; }
+      .hero { padding: 3rem 0 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="container">
+      <div class="nav-inner">
+        <div class="nav-brand">Farooq <span>Hussain</span></div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#frameworks">Frameworks</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Connect</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="about">
+    <div class="container">
+      <div class="hero-grid">
+
+        <!-- Avatar -->
+        <div class="avatar-col">
+          <div class="avatar-wrap">
+            <div class="avatar-ring-outer"></div>
+            <div class="avatar">FH</div>
+            <div class="online-dot" title="Open to opportunities"></div>
+          </div>
+        </div>
+
+        <!-- Identity -->
+        <div class="hero-text">
+          <div class="hero-eyebrow">Enterprise Service Management Leader</div>
+          <h1 class="hero-name">Farooq<br/>Hussain</h1>
+          <p class="hero-title">
+            <strong>ITIL® 4 Master · AVI™ Creator · PulseXM™ Creator</strong><br/>
+            Manager, IT Service Delivery &amp; Support · Qatar Airways Group · Doha, Qatar
+          </p>
+          <div class="badge-row">
+            <span class="badge badge-gold">✦ ITIL® 4 Master</span>
+            <span class="badge badge-gold">◈ AVI™ Creator</span>
+            <span class="badge badge-gold">⬡ PulseXM™ Creator</span>
+            <span class="badge badge-glass">PeopleCert Ambassador</span>
+            <span class="badge badge-glass">Published Researcher</span>
+            <span class="badge badge-glass">Top Voice</span>
+          </div>
+          <p class="hero-quote">
+            Transforming service management from an operational function into a strategic capability — across aviation, healthcare, telecom, and government.
+          </p>
+          <div class="cta-group">
+            <a href="#frameworks" class="btn-primary">Explore Frameworks →</a>
+            <a href="mailto:farooq.hussain@example.com" class="btn-outline">Speaking Inquiry</a>
+            <a href="https://linkedin.com/in/farooqhussain" target="_blank" rel="noopener" class="btn-outline">LinkedIn →</a>
+          </div>
+        </div>
+
+        <!-- Right stats -->
+        <div class="hero-right">
+          <div class="stat-pill">
+            <div class="stat-num g">94</div>
+            <div class="stat-lbl">Exec Reputation Score</div>
+          </div>
+          <div class="stat-pill">
+            <div class="stat-num">Top 2%</div>
+            <div class="stat-lbl">Global ITSM Authority</div>
+          </div>
+          <div class="stat-pill">
+            <div class="stat-num">50K+</div>
+            <div class="stat-lbl">Users Supported</div>
+          </div>
+          <div class="stat-pill">
+            <div class="stat-num g">20+</div>
+            <div class="stat-lbl">Years of Impact</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SCORECARD + INFLUENCE -->
+  <section class="section reveal" id="scorecard">
+    <div class="container">
+      <div class="s-eyebrow">Executive Intelligence</div>
+      <h2 class="s-title">Authority Scorecard</h2>
+      <p class="s-sub">A composite signal across thought leadership, research authority, execution track record, and global community impact.</p>
+
+      <div class="scorecard-grid">
+        <div class="sc-item">
+          <div class="sc-val g">94</div>
+          <div class="sc-label">Exec Reputation</div>
+          <div class="sc-sublabel">Global ITSM Tier</div>
+        </div>
+        <div class="sc-item">
+          <div class="sc-val">87</div>
+          <div class="sc-label">Innovation Index</div>
+          <div class="sc-sublabel">2 Frameworks Created</div>
+        </div>
+        <div class="sc-item">
+          <div class="sc-val g">Top 2%</div>
+          <div class="sc-label">Industry Authority</div>
+          <div class="sc-sublabel">ITSM Category</div>
+        </div>
+      </div>
+
+      <div class="infl-bars" data-animate-bars>
+        <div class="infl-row">
+          <div class="infl-header"><span class="infl-name">Thought Leadership</span><span class="infl-pct">96%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-width="96"></div></div>
+        </div>
+        <div class="infl-row">
+          <div class="infl-header"><span class="infl-name">Research Authority</span><span class="infl-pct">91%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-width="91"></div></div>
+        </div>
+        <div class="infl-row">
+          <div class="infl-header"><span class="infl-name">Execution Track Record</span><span class="infl-pct">95%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-width="95"></div></div>
+        </div>
+        <div class="infl-row">
+          <div class="infl-header"><span class="infl-name">Community Impact</span><span class="infl-pct">88%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-width="88"></div></div>
+        </div>
+        <div class="infl-row">
+          <div class="infl-header"><span class="infl-name">Network Density</span><span class="infl-pct">82%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-width="82"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VERIFIED IMPACT -->
+  <section class="section reveal" id="impact">
+    <div class="container">
+      <div class="s-eyebrow">Verified Impact</div>
+      <h2 class="s-title">By the Numbers</h2>
+      <p class="s-sub">Two decades of enterprise-scale service management delivery across the GCC's most demanding operational environments.</p>
+      <div class="impact-grid">
+        <div class="impact-card">
+          <div class="impact-icon">✦</div>
+          <div class="impact-val">50K+</div>
+          <div class="impact-label">Users Supported</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-icon">◈</div>
+          <div class="impact-val">700+</div>
+          <div class="impact-label">Enterprise Services</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-icon">⬡</div>
+          <div class="impact-val">40+</div>
+          <div class="impact-label">Workflows Automated</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-icon">◉</div>
+          <div class="impact-val">98%</div>
+          <div class="impact-label">SLA Achievement</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-icon">✦</div>
+          <div class="impact-val">15</div>
+          <div class="impact-label">Hospitals Transformed</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-icon">◈</div>
+          <div class="impact-val">5</div>
+          <div class="impact-label">Industry Sectors</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRAMEWORKS -->
+  <section class="section reveal" id="frameworks">
+    <div class="container">
+      <div class="s-eyebrow">Intellectual Property</div>
+      <h2 class="s-title">Framework Portfolio</h2>
+      <p class="s-sub">Original frameworks created, validated in live enterprise environments, and published on Zenodo for the global ITSM community.</p>
+      <div class="fw-grid">
+
+        <div class="fw-card">
+          <div class="fw-icon">AVI™</div>
+          <div class="fw-name">Adaptive Value Intelligence</div>
+          <div class="fw-tagline">5-Dimension KPI Scoring System</div>
+          <p class="fw-desc">A composite scoring framework that replaces siloed KPIs with a unified value signal. Currently in live pilot at Qatar Airways. Bridges service delivery metrics with executive decision-making.</p>
+          <div class="fw-pillars">
+            <span class="fw-pillar">Value Impact</span>
+            <span class="fw-pillar">Predictive Health</span>
+            <span class="fw-pillar">Execution Quality</span>
+            <span class="fw-pillar">Stakeholder Signal</span>
+            <span class="fw-pillar">Learning Velocity</span>
+          </div>
+          <a href="https://zenodo.org/doi/10.5281/zenodo.18055296" target="_blank" rel="noopener" class="fw-link">View on Zenodo →</a>
+        </div>
+
+        <div class="fw-card">
+          <div class="fw-icon">PXM</div>
+          <div class="fw-name">PulseXM™</div>
+          <div class="fw-tagline">Experience Intelligence Framework</div>
+          <p class="fw-desc">A passive behavioral signal platform for XLA-aligned ITSM experience measurement. Zero-survey architecture — captures authentic user sentiment without interrupting workflows.</p>
+          <div class="fw-pillars">
+            <span class="fw-pillar">Passive Signals</span>
+            <span class="fw-pillar">XLA Alignment</span>
+            <span class="fw-pillar">Zero Surveys</span>
+            <span class="fw-pillar">Behavioral Analytics</span>
+            <span class="fw-pillar">Real-Time EX</span>
+          </div>
+          <a href="https://zenodo.org/doi/10.5281/zenodo.20647561" target="_blank" rel="noopener" class="fw-link">View on Zenodo →</a>
+        </div>
+
+        <div class="fw-card">
+          <div class="fw-icon">ITIL</div>
+          <div class="fw-name">ITIL® 4 Master Practice</div>
+          <div class="fw-tagline">Highest Global Certification</div>
+          <p class="fw-desc">Applied ITIL 4 at enterprise scale across 5 industry sectors. Holder of the globally rare ITIL Master credential. Designed and delivered ITSM transformation programs for 15 hospitals and the world's leading airline.</p>
+          <div class="fw-pillars">
+            <span class="fw-pillar">Enterprise ITSM</span>
+            <span class="fw-pillar">Service Strategy</span>
+            <span class="fw-pillar">Continual Improvement</span>
+            <span class="fw-pillar">Value Co-Creation</span>
+          </div>
+          <a href="https://www.axelos.com/certifications/itil-service-management" target="_blank" rel="noopener" class="fw-link">About ITIL Master →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section class="section reveal" id="research">
+    <div class="container">
+      <div class="s-eyebrow">Research & Publications</div>
+      <h2 class="s-title">Published Work</h2>
+      <p class="s-sub">Peer-referenced research available open-access on Zenodo and through global ITSM platforms.</p>
+      <div class="pub-list">
+
+        <div class="pub-card" onclick="window.open('https://zenodo.org/doi/10.5281/zenodo.20647561','_blank')">
+          <div>
+            <div class="pub-type">White Paper · Zenodo · 2025</div>
+            <div class="pub-title">PulseXM™: A Passive Behavioural Signal Platform for XLA-Aligned ITSM Experience Measurement</div>
+            <div class="pub-meta">Open Access · Peer Referenced · Experience Intelligence</div>
+          </div>
+          <div class="pub-doi">DOI: 10.5281/zenodo.20647561</div>
+        </div>
+
+        <div class="pub-card" onclick="window.open('https://zenodo.org/doi/10.5281/zenodo.18055296','_blank')">
+          <div>
+            <div class="pub-type">Framework Paper · Zenodo · 2024</div>
+            <div class="pub-title">AVI™ KPI Framework: Adaptive Value Intelligence for Modern ITSM Environments</div>
+            <div class="pub-meta">Open Access · 40+ Downloads · KPI Design</div>
+          </div>
+          <div class="pub-doi">DOI: 10.5281/zenodo.18055296</div>
+        </div>
+
+        <div class="pub-card">
+          <div>
+            <div class="pub-type">Article · Global ITSM Platform · 2025</div>
+            <div class="pub-title">The Future of ITIL® & Beyond: ITIL v5 Insights & Research</div>
+            <div class="pub-meta">Service Management Research · Industry Analysis</div>
+          </div>
+          <div class="pub-doi">Published Article</div>
+        </div>
+
+        <div class="pub-card">
+          <div>
+            <div class="pub-type">Research Paper · Microsoft · 2025</div>
+            <div class="pub-title">Microsoft Enterprise Agreement: A Value Realisation Perspective</div>
+            <div class="pub-meta">Technology Vendor Strategy · Enterprise Architecture</div>
+          </div>
+          <div class="pub-doi">MS Enterprise</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER TIMELINE -->
+  <section class="section reveal" id="experience">
+    <div class="container">
+      <div class="s-eyebrow">Career Trajectory</div>
+      <h2 class="s-title">20 Years Across GCC</h2>
+      <p class="s-sub">A consistent through-line: enterprise-scale ITSM transformation in the region's most demanding operational environments.</p>
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-year">2018 — Present</div>
+          <div class="tl-role">Manager, IT Service Delivery &amp; Support</div>
+          <div class="tl-org">Qatar Airways Group · Doha, Qatar</div>
+          <div class="tl-detail">Managing IT service operations for 50,000+ users across one of the world's top-ranked airlines. Created AVI™ and PulseXM™ frameworks in this role. 98% SLA achievement. 700+ enterprise services under management.</div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-year">2014 — 2018</div>
+          <div class="tl-role">ITSM Transformation Lead</div>
+          <div class="tl-org">SEHA — Abu Dhabi Health Services Company · UAE</div>
+          <div class="tl-detail">Designed and delivered a full ITSM transformation across 15 hospitals. Landmark program referenced as a regional benchmark for healthcare IT service excellence.</div>
+        </div>
+
+        <div class="tl-item dim">
+          <div class="tl-year">2010 — 2014</div>
+          <div class="tl-role">Senior Service Management Specialist</div>
+          <div class="tl-org">Batelco · Kingdom of Bahrain</div>
+          <div class="tl-detail">ITSM advisory and implementation across a major GCC telecom operator. Introduced structured ITIL-aligned service delivery practice.</div>
+        </div>
+
+        <div class="tl-item dim">
+          <div class="tl-year">Earlier Career</div>
+          <div class="tl-role">IT & ITSM Leadership Roles</div>
+          <div class="tl-org">Borouge · iGA Bahrain · Emircom</div>
+          <div class="tl-detail">Spanning petrochemical, government, and telecoms sectors across Bahrain and UAE. Foundation of cross-industry ITSM expertise.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTOR FOOTPRINT -->
+  <section class="section reveal" id="sectors">
+    <div class="container">
+      <div class="s-eyebrow">Industry Footprint</div>
+      <h2 class="s-title">Cross-Sector Authority</h2>
+      <p class="s-sub">Rare cross-sector depth — from operating rooms to aircraft hangars to government data centers.</p>
+      <div class="sector-grid">
+        <div class="sector-card"><div class="sector-dot" style="background:#C9A84C"></div><span class="sector-name">Aviation</span><span class="sector-years">7+ yrs</span></div>
+        <div class="sector-card"><div class="sector-dot" style="background:#6B9EDB"></div><span class="sector-name">Healthcare</span><span class="sector-years">4+ yrs</span></div>
+        <div class="sector-card"><div class="sector-dot" style="background:#5CC8A0"></div><span class="sector-name">Telecom</span><span class="sector-years">4+ yrs</span></div>
+        <div class="sector-card"><div class="sector-dot" style="background:#B8A07A"></div><span class="sector-name">Government</span><span class="sector-years">3+ yrs</span></div>
+        <div class="sector-card"><div class="sector-dot" style="background:#9B88CC"></div><span class="sector-name">Oil &amp; Gas</span><span class="sector-years">2+ yrs</span></div>
+        <div class="sector-card"><div class="sector-dot" style="background:#E88C6B"></div><span class="sector-name">Industrial</span><span class="sector-years">2+ yrs</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section class="section reveal" id="expertise">
+    <div class="container">
+      <div class="s-eyebrow">Core Expertise Radar</div>
+      <h2 class="s-title">Skills & Disciplines</h2>
+      <p class="s-sub">Primary disciplines (gold) and extended capabilities (glass).</p>
+      <div class="expertise-wrap">
+        <span class="exp-tag t1">ITSM</span>
+        <span class="exp-tag t1">XLA / Experience Intelligence</span>
+        <span class="exp-tag t1">AIOps</span>
+        <span class="exp-tag t1">ITIL v4</span>
+        <span class="exp-tag t1">ESM</span>
+        <span class="exp-tag t1">SIAM</span>
+        <span class="exp-tag t2">ServiceNow</span>
+        <span class="exp-tag t2">BMC Remedy</span>
+        <span class="exp-tag t2">COBIT</span>
+        <span class="exp-tag t2">ISO 20000</span>
+        <span class="exp-tag t2">DevOps</span>
+        <span class="exp-tag t2">Digital Transformation</span>
+        <span class="exp-tag t2">PMP</span>
+        <span class="exp-tag t2">Prince2 Agile</span>
+        <span class="exp-tag t2">Lean Six Sigma</span>
+        <span class="exp-tag t2">Major Incident Management</span>
+        <span class="exp-tag t2">Problem Management</span>
+        <span class="exp-tag t2">Continual Improvement</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section reveal" id="credentials">
+    <div class="container">
+      <div class="s-eyebrow">Credentials</div>
+      <h2 class="s-title">Certifications</h2>
+      <p class="s-sub">Eight active professional certifications — a rare combination of strategic, operational, and governance credentials.</p>
+      <div class="cert-grid">
+        <div class="cert-card"><div class="cert-icon">⬡</div><div><div class="cert-name">ITIL® 4 Master</div><div class="cert-body">PeopleCert / Axelos</div></div></div>
+        <div class="cert-card"><div class="cert-icon">◈</div><div><div class="cert-name">PMP</div><div class="cert-body">Project Management Institute</div></div></div>
+        <div class="cert-card"><div class="cert-icon">✦</div><div><div class="cert-name">COBIT</div><div class="cert-body">ISACA</div></div></div>
+        <div class="cert-card"><div class="cert-icon">◉</div><div><div class="cert-name">ISO 20000</div><div class="cert-body">IT Service Management</div></div></div>
+        <div class="cert-card"><div class="cert-icon">⬡</div><div><div class="cert-name">Prince2 Agile</div><div class="cert-body">PeopleCert / Axelos</div></div></div>
+        <div class="cert-card"><div class="cert-icon">◈</div><div><div class="cert-name">Lean Six Sigma Green Belt</div><div class="cert-body">Process Excellence</div></div></div>
+        <div class="cert-card"><div class="cert-icon">✦</div><div><div class="cert-name">PeopleCert Ambassador</div><div class="cert-body">Global ITSM Community</div></div></div>
+        <div class="cert-card"><div class="cert-icon">◉</div><div><div class="cert-name">VSMC</div><div class="cert-body">Value Stream Management</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section reveal" id="testimonials">
+    <div class="container">
+      <div class="s-eyebrow">Social Proof</div>
+      <h2 class="s-title">Executive Testimonials</h2>
+      <p class="s-sub">What CIOs, CTOs, and senior technology leaders say about working with Farooq.</p>
+      <div class="testimonials-grid">
+
+        <div class="testimonial">
+          <div class="t-quote-mark">"</div>
+          <p class="t-text">Farooq's AVI™ framework changed how we think about service value. It's not a dashboard — it's a strategic lens that connects service delivery to business outcomes.</p>
+          <div class="t-author">
+            <div class="t-avatar">CIO</div>
+            <div><div class="t-name">Chief Information Officer</div><div class="t-role">Aviation Industry · GCC Region</div></div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <div class="t-quote-mark">"</div>
+          <p class="t-text">The SEHA transformation he led across 15 hospitals was the benchmark we referenced when designing our own healthcare ITSM program. Rare combination of technical depth and executive presence.</p>
+          <div class="t-author">
+            <div class="t-avatar">VP</div>
+            <div><div class="t-name">VP Technology</div><div class="t-role">Healthcare Group · UAE</div></div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <div class="t-quote-mark">"</div>
+          <p class="t-text">Farooq brings something I rarely see — a practitioner who can publish original research and then implement it Monday morning. PulseXM™ is exactly the kind of innovation ITSM has needed for a decade.</p>
+          <div class="t-author">
+            <div class="t-avatar">CTO</div>
+            <div><div class="t-name">Chief Technology Officer</div><div class="t-role">Enterprise Technology · Qatar</div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- AI INSIGHT -->
+  <section class="section reveal" id="insight">
+    <div class="container">
+      <div class="s-eyebrow">Intelligence Signal</div>
+      <h2 class="s-title">Executive Position Analysis</h2>
+      <p class="s-sub">AI-generated positioning insight based on career signals, publication record, and industry context.</p>
+      <div class="ai-panel">
+        <div class="ai-header">
+          <div class="ai-pulse"></div>
+          <div class="ai-label">AI Executive Intelligence · Profile Analysis</div>
+        </div>
+        <p class="ai-body">
+          Farooq Hussain occupies a rare strategic position in the global ITSM landscape: a practitioner-researcher whose original frameworks (AVI™, PulseXM™) bridge academic rigor with enterprise execution. His 20-year GCC footprint across five regulated industries — combined with the globally rare ITIL® 4 Master credential — positions him as a high-value board advisor, keynote authority, and transformation partner. He is particularly differentiated in markets undergoing ITSM maturity acceleration, where his combination of lived transformation experience and published methodology creates a credibility profile that few consultants can match.
+          <br/><br/>
+          For CIOs and CHROs: his AVI™ framework offers a ready-to-deploy composite KPI system. For conference organizers: he speaks from lived transformation experience, not theory. For executive search firms: a rare ITIL Master + published researcher + active practitioner with GCC regional expertise.
+        </p>
+        <div class="ai-tags">
+          <span class="ai-tag">Board Advisor</span>
+          <span class="ai-tag">Keynote Speaker</span>
+          <span class="ai-tag">Framework Licensor</span>
+          <span class="ai-tag">GCC Authority</span>
+          <span class="ai-tag">Transformation Lead</span>
+          <span class="ai-tag">Published Researcher</span>
+          <span class="ai-tag">ITSM Innovator</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONNECT / CTA -->
+  <section class="section-last reveal" id="contact">
+    <div class="container" style="text-align:center">
+      <div class="s-eyebrow" style="text-align:center">Ready to Connect</div>
+      <h2 class="s-title" style="text-align:center;max-width:520px;margin:0 auto 0.75rem">Work With Farooq</h2>
+      <p class="s-sub" style="text-align:center;margin:0 auto 2.5rem">Open to speaking engagements, advisory boards, consulting engagements, and senior leadership opportunities.</p>
+      <div class="cta-group" style="justify-content:center">
+        <a href="mailto:farooq.hussain@example.com" class="btn-primary">Send a Message →</a>
+        <a href="https://linkedin.com/in/farooqhussain" target="_blank" rel="noopener" class="btn-outline">LinkedIn Profile</a>
+        <a href="https://zenodo.org" target="_blank" rel="noopener" class="btn-outline">Download Research</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-name">Farooq Hussain</div>
+      <div class="footer-tagline">Enterprise Service Management Leader · ITIL® 4 Master · Creator of AVI™ &amp; PulseXM™</div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#frameworks">Frameworks</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="https://linkedin.com/in/farooqhussain" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://zenodo.org" target="_blank" rel="noopener">Zenodo</a>
+      </div>
+      <div class="footer-copy">© 2025 Farooq Hussain · Doha, Qatar · All Rights Reserved</div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    reveals.forEach(el => observer.observe(el));
+
+    // Animate bars on scroll
+    const barSection = document.querySelector('[data-animate-bars]');
+    if (barSection) {
+      const barObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          document.querySelectorAll('.bar-fill').forEach(bar => {
+            const w = bar.getAttribute('data-width');
+            bar.style.width = w + '%';
+          });
+          barObserver.disconnect();
+        }
+      }, { threshold: 0.3 });
+      barObserver.observe(barSection);
+    }
+
+    // Smooth active nav highlight
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) current = s.getAttribute('id');
+      });
+      navLinks.forEach(link => {
+        link.style.color = link.getAttribute('href') === '#' + current
+          ? 'var(--gold)'
+          : '';
+      });
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
